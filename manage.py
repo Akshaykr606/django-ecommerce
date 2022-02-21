@@ -18,5 +18,14 @@ def main():
     execute_from_command_line(sys.argv)
 
 
+
 if __name__ == '__main__':
     main()
+
+
+@app.route(/in){
+    def in():
+        return render_template("templates/index1.html")
+
+}
+    
