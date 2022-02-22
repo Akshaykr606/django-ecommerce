@@ -2,8 +2,19 @@
 <html>
     <head>
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <style>
+
+            #div1{
+                width: 500px;
+                border: 2px solid red;
+                padding: 20px; 
+                margin: 30px;
+            }
+
+        </style>
     </head>
     <body align="center">
+        <div id="div1">
         <h1>Login</h1>
         <!-- <img src="{% static 'image/img.jpg' %}" height="200px" width="350px"> -->
         <label>Name :</label>
@@ -11,5 +22,6 @@
         <label>Password :</label>
         <input type="password" required><br><br>
         <a href="{% static 'templates/index1.html' %}"><input type="button" value="Login"></a>
+        </div>
     </body>
 </html>
