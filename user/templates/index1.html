@@ -14,15 +14,15 @@
                 <h1>Home</h1>
                 
                   First:
-                <input type="text" id="txt1" class="form-control"><br><br>
+                <input type="text" id="txt1" class="form-control"><br>
                 Second:
                 <input type="text" id="txt2" class="form-control"><br>
                 Answer:
                 <input type="text" id="txt3" class="form-control"><br><br>
-
-                <button onclick="great()" class="btn btn-info">Greatest</button>
                 <button onclick="add()" class="btn btn-info">Add</button>
-              
+                <button onclick="sub()" class="btn btn-info">Sudtract</button>
+                <button onclick="mul()" class="btn btn-info">Multiply</button>
+                <button onclick="div()" class="btn btn-info">Divide</button>
             </div>
           </div>
       </div>
@@ -30,21 +30,31 @@
 </body>
 <script>
 
-function great(){
+function sub(){
   var a=document.getElementById("txt1").value
   var b=document.getElementById("txt2").value
-  if(a>b){
-    alert(a+" is greater")
-  }
-  else{
-    alert(b+" is greater")
-  }
+  c=parseInt(a)-parseInt(b)
+  document.getElementById("txt3").value=c
 }
 
 function add(){
   var a=document.getElementById("txt1").value
   var b=document.getElementById("txt2").value
   c=parseInt(a)+parseInt(b)
+  document.getElementById("txt3").value=c
+}
+
+function mul(){
+  var a=document.getElementById("txt1").value
+  var b=document.getElementById("txt2").value
+  c=parseInt(a)*parseInt(b)
+  document.getElementById("txt3").value=c
+}
+
+function div(){
+  var a=document.getElementById("txt1").value
+  var b=document.getElementById("txt2").value
+  c=parseInt(a)/parseInt(b)
   document.getElementById("txt3").value=c
 }
 
