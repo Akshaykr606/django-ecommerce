@@ -7,3 +7,6 @@ def index(request):
 
 def index1(request):
     return render(request,'index1.html')
+
+def reg(request):
+    return render(request,'form.html')
