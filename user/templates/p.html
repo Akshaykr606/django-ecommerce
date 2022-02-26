@@ -8,16 +8,18 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="div">
     <p id="p">First</p>
     <p id="p2" style="display: none;">Second</p>
-    <p id="p3">third</p>
+    <p id="p3">third</p></div>
     <button id="btn">Click</button>
 <script>
     $(document).ready(function() {
         $('#btn').click(function(){
-            $("#p").css("color", "red");
-            $('#p2').slideDown();
-            $('#p3').slideUp();
+            // $("#p").css("color", "red");
+            // $('#p2').slideDown();
+            // $('#p3').slideUp();
+            $('#div').empty();
         });
     });
 </script>
