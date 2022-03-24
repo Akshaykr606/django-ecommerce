@@ -1,63 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-
-        </title>
+        <title>Register</title>
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="../static/js/jquery.min.js"></script>
         <style>
-            
+            h3 {
+                width:500px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            table{
+                width:500px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            th{
+                text-align: left;
+            }
+
+            #btn{
+                text-align: right;
+            }
         </style>
     </head>
     <body>
 
-        <form id="form" action="index1.html" onsubmit="return check()">
-            <h3>Registration Form</h3><br><br>
+        <form id="form" action="login.html" onsubmit="return check()">
+            <h3>Register New Account</h3><br><br>
             <table>
                 <tr>
                     <th>
-                        <label>Name :</label>
-                        
+                        <label>Name</label>
                     </th> 
                     <td><input type="text" id="name" class="form-control"></td> 
                     <td><span id="sname"></span></td>  
                 </tr>
                 <tr>
                     <th>
-                        <label>Age :</label>
+                        <label>Place</label>
                     </th>  
-                    <td><input type="number" id="age" class="form-control"></td> 
+                    <td><input type="text" id="age" class="form-control"></td> 
                     <td><span id="sage"></span></td>  
                 </tr>
                 <tr>
-                    <th>    
-                        <label>Gender :</label>
-                    </th>    
-                    <td>
-                         <input type="radio" id="gender" checked>Male
-                        <input type="radio" id="gender">Female
-                    </td>
-                </tr>
-                <tr>
                     <th>
-                        <label>Email :</label></th> 
+                        <label>Email</label></th> 
                         <td>
                         <input type="email" id="email" class="form-control">
                     </td>
                     <td><span id="semail"></span></td> 
                 </tr>
                 <tr>
-                    <th><label>Contact :</label></th>
+                    <th>
+                        <label>Address</label>
+                    </th>
                     <td>
-                        <input type="number" id="contact" class="form-control">
+                        <textarea class="form-control" id="address"></textarea>
+                    </td>
+                    <td><span id="saddress"></span></td> 
+                </tr>
+                <tr>
+                    <th><label>Username</label></th>
+                    <td>
+                        <input type="text" id="contact" class="form-control">
                     </td>
                     <td><span id="scontact"></span></td> 
                 </tr>
                 <tr>
                     <th>
-                        <label>Password :</label></th> 
+                        <label>Password</label></th> 
                         <td>
                         <input type="password" id="pass" class="form-control">
                     </td>
@@ -65,17 +80,21 @@
                 </tr>
                 <tr>
                     <th>
-                        <label>Confirm Password :</label></th>
+                        <label>Confirm Password</label></th>
                         <td>
                         <input type="password" id="cpass" class="form-control">
                     </td>
                     <td><span id="scpass"></span></td> 
                 </tr>
+                <tr>
+                    <th></th>
+                    <td id="btn">
+                        <input type="submit" value="Register" class="btn btn-outline-dark" id="btn">
+                    </td>
+                </tr>
             </table><br>
-            <input type="submit" value="Submit" class="btn btn-info" id="btn">
-            <input type="reset" value="Reset" class="btn btn-light" id="btn">
-        </form><br>
-        <p id="p">Register now</p>
+            
+        </form>
     </body>
     <script>
         function check(){
@@ -90,7 +109,7 @@
 
             var age=document.getElementById('age')
             if(age.value=="") {
-                document.getElementById("sage").innerHTML="Enter Your age"
+                document.getElementById("sage").innerHTML="Enter Your Place"
                 return false
             }
             else{
@@ -141,6 +160,14 @@
                 document.getElementById("scpass").innerHTML=""
             }
 
+            var address=document.getElementById('address')
+            if(address.value=="") {
+                document.getElementById("saddress").innerHTML="Enter Your Address"
+                return false
+            }
+            else{
+                document.getElementById("saddress").innerHTML=""
+            }
 
             $(document).ready(function() {
                 $("#p").css("background-color", "red");

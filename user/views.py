@@ -5,8 +5,14 @@ from django.shortcuts import render
 def index(request):
     return render(request,'index.html')
 
-def index1(request):
-    return render(request,'index1.html')
-
 def reg(request):
-    return render(request,'form.html')
+    return render(request,'reg.html')
+
+def login(request):
+    return render(request,'login.html')
+
+def admin(request):
+    return render(request,'admin.html')
+
+def emp(request):
+    return render(request,'emp.html')
